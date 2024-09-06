@@ -1,0 +1,555 @@
+:root{
+    --text: #ADD8E6;
+    --button: #232B2B;
+    overflow: auto;
+}
+*{
+    color: var(--text);
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+body{
+    background-color: #000;
+}
+div.episode p span.cd{
+    font-family: Caesar, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+div.episode p .md-sh, div.episode p.md-sh{
+    color: white;
+    font-family: MS, Helvetica, Arial, sans-serif;
+}
+@font-face {
+    font-family: Caesar;
+    src: url(./Fonts/CaesarDressing.ttf);
+}
+@font-face {
+    font-family: Canterbury;
+    src: url(./Fonts/Canterbury.ttf);
+}
+@font-face {
+    font-family: MS;
+    src: url(./Fonts/MedievalSharp.ttf);
+}
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--text); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+::webkit-scrollbar:horizontal{
+    background: transparent;
+    box-shadow: none;
+    height: 0;
+}
+/* SWAL */
+/* Custom styles for SweetAlert2 */
+.custom-popup {
+    background-color: #232B2B;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.custom-title {
+    color: #ADD8E6;
+    font-family: Caesar, Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.custom-content {
+    color: #ADD8E6;
+    font-family: Caesar, Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+}
+.custom-icon{
+    width: 50px;
+    height: 50px;
+}
+.custom-confirm-button {
+    background-color: #000;
+    color: #ADD8E6;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: Caesar, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    border: none;
+}
+
+.custom-confirm-button:hover {
+    background-color: #ADD8E6;
+    color: #000;
+}
+.animate__animated{
+    --animate-duration: 0.75s;
+}
+/* BACK */
+button{
+    width: 500px;
+    padding: 30px;    
+    background-color: var(--button);
+    border: none;
+    border-radius: 12px;
+    font-family: Caesar ,Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:hover, button:active{
+    background-color: #000;
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff;
+}
+
+
+/* INDEX.HTML */
+header{
+    border-bottom: 2px solid var(--text);
+    padding: 0 30px;
+    height: auto;
+    width: 100%;
+}
+header h1{
+    font-size: 52px;   
+    font-family:Canterbury, Arial, Helvetica, sans-serif;
+}
+div.body{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    align-content: center;
+}
+div.body div.left{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+div.body div.left img{
+    border-radius: 33px;
+    height: 92%;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+}
+div.body div.left img:nth-child(1){
+    margin-right: 50px;
+}
+div.body div.right{
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+div.body div.right a {
+    margin: 35px 25px;
+}
+
+
+/* OTHERS */
+body.outB , body.outBE{
+    width: 1465px;
+}
+
+header.out, header.outE {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.out a , header.outE a{
+    cursor: pointer;
+    font-size: 4vw;
+    font-family: Canterbury, Arial, Helvetica, sans-serif;
+    transition: 5s;
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
+}
+header.out a.un::before ,header.outE a.un::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+header.out a.un:hover::before, header.outE a.un:hover::before {
+    transform: scaleX(1);
+}
+div.container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.container ul li a button{
+    margin-top: 7px;
+}
+div.episode{
+    padding: 0 30px;
+}
+div.episode h1{
+    font-family: Caesar ,Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+div.episode p{
+    font-size: 25px;
+    font-family: sans-serif, Arial, Helvetica;
+    color: white;
+    text-align: justify;
+}
+div.credit{
+    padding: 0 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+div.credit h1.big{
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+div.credit h1{
+    font-size: 30px;
+}
+div.credit h2{
+    font-size: 30px;
+}
+footer{
+    padding: 0 30px;
+}
+footer h3, footer p, footer span, footer a, footer p, footer span, footer a{
+    font-size: 20px;
+    color: #fff;
+}
+div.riddle h2{
+    font-family: Caesar ,Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+}
+div.riddle p#errorMsg{
+    font-size: 1.5vw;
+    color: red;
+    font-family: Caesar ,Arial, Helvetica, sans-serif;
+}
+button.form{
+    font-size: 40px;
+    padding: 0;
+    width: 150px;
+    margin: 25px 0px;
+}
+input{
+    padding: 5px 25px;
+    border: 2px solid var(--text);
+    border-radius: 7px;
+    font-size: 2vw;
+}
+div.riddle div.container button{
+    font-size: 2vw;
+}
+::placeholder{
+    font-family: Caesar ,Arial, Helvetica, sans-serif;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1000px) {
+    header{
+        text-align: center;
+    }
+    div.body{
+        flex-direction: column-reverse;
+        padding: 1px 40px;
+    }
+    div.body div.left{
+        flex-direction: column;
+        margin: auto;
+    }
+    div.body div.left img{
+        height: 200%;
+    }
+    div.body div.left img{
+        margin-bottom: 75px;
+        margin-right: 0px;
+    }
+    div.body div.right{
+        padding: 0px 190px;
+        margin: auto;
+    }
+    div.body div.right a button{
+        width: 700px;
+    }
+    body.outBE{
+        width: 100%;
+    }
+    header.out{
+        width: 95%;
+    }
+    div.riddle h2{
+        font-size: 4vw;
+    }
+    div.riddle div.container button{
+        font-size: 3vw;
+    }
+    div.riddle p#errorMsg{
+        font-size: 3.5vw;
+    }
+    button.form{
+        font-size: 60px;
+        width: 175px;
+    }
+    input{
+        font-size: 4vw;
+    }
+  }
+@media only screen and (max-width: 750px){
+    div.body div.right a button{
+        width: 600px;
+    }
+    header.outE a{
+        font-size: 5vw;
+    }
+    header.out a{
+        font-size: 10vw;
+    }
+    div.episode h1{
+        font-size: 50px;
+    }
+    div.episode p{
+        font-size: 30px;
+    }
+    div.container ul li a button{
+        font-size: 7vw;
+    }
+    div.credit h1.big{
+        font-size: 50px;
+    }
+    div.credit h1{
+        font-size: 40px;
+    }
+    div.credit h2{
+        font-size: 35px;
+    }
+    footer h3, footer p, footer span, footer a, footer p, footer span, footer a{
+        font-size: 30px;
+    }
+    div.riddle h2{
+        font-size: 7vw;
+    }
+    div.riddle p#errorMsg{
+        font-size: 6.5vw;
+    }
+    button.form{
+        font-size: 70px;
+        width: 200px;
+    }
+    input{
+        font-size: 7vw;
+    }
+}
+@media only screen and (max-width: 600px){
+    div.body div.right a button{
+        font-size: 6vw;
+    }
+    header.outE a{
+        font-size: 7vw;
+    }
+    header.out a{
+        font-size: 13vw;
+    }
+    div.episode h1{
+        font-size: 60px;
+    }
+    div.episode p{
+        font-size: 40px;
+    }
+    div.container ul li a button{
+        font-size: 10vw;
+    }
+    div.credit h1.big{
+        font-size: 55px;
+    }
+    div.credit h1{
+        font-size: 45px;
+    }
+    div.credit h2{
+        font-size: 40px;
+    }
+    footer h3, footer p, footer span, footer a{
+        font-size: 35px;
+    }
+    div.riddle h2{
+        font-size: 9vw;
+    }
+    div.riddle p#errorMsg{
+        font-size: 8.5vw;
+    }
+    button.form{
+        font-size: 80px;
+        width: 225px;
+    }
+    input{
+        font-size: 8vw;
+    }
+}
+@media only screen and (max-width: 500px){
+    header{
+        width: 510px;
+    }
+    header h1{
+        font-size: 55px;
+        text-wrap: wrap;
+    }
+    body{
+        width: 300px;
+    }
+    div.body div.right a button{
+        width: 400px;
+    }
+    div.body div.left{
+        margin: 40px;
+    }
+    div.body div.left img{
+        width: 300%;
+    }
+    div.body div.right a button{
+        font-size: 10vw;
+    }
+    header.outE a{
+        font-size: 9vw;
+    }
+    div.container ul li{
+        margin: auto;
+    }
+    header.out a{
+        font-size: 20vw;
+    }
+    div.episode h1{
+        font-size: 75px;
+    }
+    div.episode p{
+        font-size: 55px;
+    }
+    div.container ul li a button{
+        font-size: 15vw;
+    }
+    div.credit h1.big{
+        font-size: 60px;
+    }
+    div.credit h1{
+        font-size: 50px;
+    }
+    div.credit h2{
+        font-size: 45px;
+    }
+    footer h3, footer p, footer span, footer a{
+        font-size: 40px;
+    }
+    div.riddle h2{
+        font-size: 15vw;
+    }
+    div.riddle div.container button{
+        font-size: 15vw;
+    }
+    div.riddle p#errorMsg{
+        font-size: 13vw;
+    }
+    button.form{
+        font-size: 17vw;
+        width: 300px;
+    }
+    input{
+        font-size: 12vw;
+    }
+}
+@media only screen and (max-width: 450px){
+    header h1{
+        font-size: 60px;
+    }
+    div.body div.right a button{
+        font-size: 13vw;
+    }
+    div.body div.left img{
+        width: 350%;
+    }
+    div.body div.left{
+        margin: 0;
+    }
+    div.body{
+        padding: 0 20px;
+    }
+    header.outE a{
+        font-size: 20vw;
+    }
+    header.outE{
+        width: 200%;
+    }
+    body.outBE div.container ul li{
+        margin-left: 150px;
+    }
+    header.out{
+        width: 95%;
+    }
+    header.out a{
+        font-size: 30vw;
+    }
+    div.episode{
+        width: 95%;
+    }
+    div.episode h1{
+        font-size: 80px;
+    }
+    div.episode p{
+        font-size: 60px;
+    }
+    div.container ul li{
+        margin-left: 400px;
+    }
+    div.container ul li a button{
+        font-size: 20vw;
+    }
+    div.credit h1.big{
+        font-size: 100px;
+    }
+    div.credit h1{
+        font-size: 90px;
+    }
+    div.credit h2{
+        font-size: 75px;
+    }
+    footer h3, footer p, footer span, footer a{
+        font-size: 70px;
+    }
+    div.riddle h2, div.riddle h1{
+        font-size: 18vw;
+    }
+    div.riddle p#errorMsg{
+        font-size: 16vw;
+    }
+    div.riddle div.container button{
+        font-size: 18vw;
+    }
+    button.form{
+        font-size: 20vw;
+        width: 300px;
+    }
+    input{
+        font-size: 15vw;
+    }
+}

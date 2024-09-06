@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Instructions | MAOA</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="outB">
+	<header class="out">
+        <a href="Instructions.html">Instructions</a>
+        <a href="riddle.html" class="un">Riddle</a>
+    </header>
+	<div class="riddle">
+		<h2>To decipher the riddle for the special story of the quest for the orb of Tiamat, you must uncover various verses of the poem scattered throughout this website, it may not be in the language you are familiar with. After you discover the verses, you must arrange them in the correct order according to the rhyme scheme (terza rima) and then the password is the first letter of each verse. Let each character be soft as a whisper. Good Luck!</h>
+		<br>
+		<br>
+		<h2>Hints:</h2>
+		<h2>
+			The father of cthulhu holds the first, <br/>
+			The second lies behind false light,<br/>
+			The third you will find under the eye of chaos,<br/>
+			The fourth lies in the beginning,<br/>
+			The present holds the fifth,<br/>
+			And the last is revealed behind this door, so tell me young adventurer which is this language?<br/>
+			Cahf ah nafl mglw'nafh hh' ahor syha'h ah'legeth, ng llll or'azath syha'hnahh n'ghftephai n'gha ahornah ah'mglw'nafh <br/>
+		</h2>
+        <input id="password" placeholder="Type the password here">
+        <br />
+		<div class="container">
+			
+		</div>
+        <a href="#errorMsg"><button onclick="checkPassword()" class="form">Submit</button></a>
+        <p id="errorMsg"></p>
+		<script>
+			function hashPassword(password) {
+				return btoa(password);
+			}
+		
+			function checkPassword() {
+				const password = document.getElementById("password").value;
+				const hashedPassword = hashPassword(password);
+		
+				// Hashes of the two valid passwords
+				const validHashes = [
+					"cmx5ZWhpYW4=",
+					"cidseWVoaWFu"
+				];
+		
+				if (validHashes.includes(hashedPassword)) {
+					document.getElementById("errorMsg").innerHTML = "like r'luhhor ot neither bthnkor nor wood ";
+				} else {
+					document.getElementById("errorMsg").innerHTML = "Uh-oh! That password's not quite right. Give it another shot, and you might just find the hidden part!";
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>

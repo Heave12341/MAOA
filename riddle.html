@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Riddle | MAOA</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="outB">
+    <header class="out">
+        <a href="riddle.html">The Riddle</a>
+        <a href="index.html" class="un">Home</a>
+    </header>
+    <div class="riddle">
+        <h2>Welcome adventurer,
+            So you wish to progress further eh? But to do that you must tell me the password.
+            If you wish to find the password go to the page below for instructions on how to solve the riddle,
+            Good day and good luck!</h2>
+        <br>
+        <h2>Enter Password to Access the Page</h2>
+        <input id="password" placeholder="Type the password here">
+        <br />
+        <button onclick="checkPassword()" class="form">Submit</button>
+        <p id="errorMsg"></p>
+        <br>
+        <br>
+        <div class="container">
+            <a href="Instructions.html"><button>Instructions</button></a>
+        </div>
+
+        <script>
+            function hashPassword(password) {
+                return btoa(password);
+            }
+        
+            function checkPassword() {
+                const password = document.getElementById("password").value;
+                const hashedPassword = hashPassword(password);
+                const correctHashedPassword = "dmVyZ2ls";
+                // You Cannot Find the Password here if you are dumb. Think :)
+                if (hashedPassword === correctHashedPassword) {
+                    window.location.href = "A7bX2rT9zL8mQ4vYpRkH.html";
+                } else {
+                    document.getElementById("errorMsg").textContent = "Uh-oh! That password's not quite right. Give it another shot, and you might just find the hidden part!";
+                }
+            }
+        </script>
+        
+    </div>
+</body>
+</html>
