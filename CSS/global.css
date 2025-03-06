@@ -1,0 +1,131 @@
+:root
+{
+	--db: #1f2833;
+}
+*
+{
+	font-family: OST, Arial, Helvetica, sans-serif;
+	list-style: none;
+	text-decoration: none;
+	color: white;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	overscroll-behavior: none;
+	scrollbar-color: #d4af37 transparent;
+	scrollbar-width: thin;
+	max-width: 100vw !important;
+	box-sizing: border-box;
+}
+html{
+	background-color: var(--db);
+	overflow-x: hidden;
+	width: 100%;
+}
+.wrapper {
+    padding: clamp(20px, 5vw, 50px);
+}
+@font-face {
+	font-family: 'OST';
+	src: url('/Assets/Font/OST-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'OST';
+	src: url('/Assets/Font/OST-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+  }
+  
+  @font-face {
+	font-family: 'OST';
+	src: url('/Assets/Font/OST-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+  }
+  .italic
+  {
+	font-style: italic;
+  }
+  .bold
+  {
+	font-weight: bold;
+  }
+  button:hover
+  { 
+    background: rgba(255, 255, 255, 0.361);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
+    color: black;
+  }
+  button:hover, a:hover
+  {
+	color: black;
+  }
+  .scroll-down 
+  {
+	position: absolute;
+    bottom: 5px;
+    right: 20px;
+    font-size: 3rem;
+    color: #ffc400;    
+    opacity: 1;
+    background-color: transparent;
+    user-select: none;
+}
+button a 
+{
+    display: block;
+    width: 100%; 
+    height: 100%;
+    text-align: center;
+    padding: 30px 0 30px;
+}
+.back-button 
+{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+	
+}
+.back-button:hover 
+{
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+}
+.hint
+{
+    color: #d4af37;
+}
+.swal-custom-btn {
+  all: unset;
+  padding: 10px 50px;
+  background-color: #d4af37;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.swal-custom-title {
+  color: #d4af37 !important;
+
+}
+.swal-custom-text
+{
+  color: #fff !important;
+}
+.swal-custom-popup
+{
+  background-color: #1f2833;
+}

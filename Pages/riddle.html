@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>The Riddle | MAOA</title>
+	<link rel="stylesheet" href="../CSS/riddle.css">
+	<link rel="stylesheet" href="../CSS/global.css">
+</head>
+<body>
+	<a href="../Home.html" class="back-button">← Back</a>
+	<div class="wrapper">
+		<div class="heading">The Riddle</div>
+		<h1>Welcome Adventurer, So you wish to progress further eh? But to do that you must tell me the password. If you wish to find the password go to the page below for instructions on how to solve the riddle, Good day and good luck!</h1>
+		<h1>Instructions:</h1>
+		<h2>To decipher the riddle for the special story of the quest for the orb of Tiamat, you must uncover various verses of the poem scattered throughout this website, it may not be in the language you are familiar with. After you discover the verses, you must arrange them in the correct order according to the rhyme scheme (terza rima) and then the password is the first letter of each verse. Let each character be soft as a whisper. Good Luck!</h2>
+		<br><h3>The father of cthulhu holds the first,</h3>
+		<br><h3>The second lies behind false light,</h3>
+		<br><h3>The third you will find under the eye of chaos,</h3>
+		<br><h3>The fourth lies in the beginning,</h3>
+		<br><h3>The present holds the fifth,</h3>
+		<br><h3>And the last is revealed behind this door, so tell me young adventurer which is this language?</h3>
+		<br><h3>" Cahf ah nafl mglw'nafh hh' ahor syha'h ah'legeth, ng llll or'azath syha'hnahh n'ghftephai n'gha ahornah ah'mglw'nafh "</h3>
+		<h2 class="password">Enter Password:</h2>
+		<input id="password" placeholder="Password" required>
+        <br />
+        <button onclick="checkPassword()" class="form">Submit</button>
+        <p id="errorMsg"></p>
+
+		<script>
+            function hashPassword(password) {
+                return btoa(password);
+            }
+        
+            function checkPassword() {
+                const password = document.getElementById("password").value;
+                const hashedPassword = hashPassword(password);
+                const correctHashedPassword = "dmVyZ2ls";
+                if (hashedPassword === correctHashedPassword) {
+                    window.location.href = "Rluh.html";
+                } else {
+                    document.getElementById("errorMsg").textContent = "Uh-oh! That password's not quite right. Give it another shot, and you might just find the hidden part!";
+                }
+            }
+        </script>
+	</div>
+</body>
+</html>

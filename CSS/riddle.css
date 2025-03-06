@@ -1,0 +1,68 @@
+h1
+{
+	font-size: clamp(1.1rem, 6.1vw, 2.1rem);
+	margin-bottom: 30px;
+}
+h1:nth-child(3)
+{
+	margin-top: 0;
+	margin-bottom: 0;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+div.heading
+{
+	text-align: center;
+	font-size: clamp(3rem, 9vw, 4rem);
+	color: #d4af37;
+	text-decoration: underline;
+	margin-bottom: 30px;
+	margin-top: 75px;	
+}
+h2
+{
+	font-size: clamp(1rem, 6vw, 2rem);
+	margin-bottom: 20px;
+}
+h3
+{
+	font-size: clamp(1rem, 6vw, 2rem);
+	color: #d4af37;
+	line-height: 2.75rem;
+	
+}
+.back-button
+{
+	position: absolute !important;
+}
+.password
+{
+	margin-top: 30px;
+}
+input{
+    padding: 5px 25px;
+    border: 2px solid #d4af37;
+    border-radius: 7px;
+    font-size: clamp(1.2rem, 2vw, 2rem);
+	color: black;
+}
+button
+{
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+	margin-top: 30px;
+	cursor: pointer;
+}
+p{
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+	margin-top: 30px;
+	color: red;
+}

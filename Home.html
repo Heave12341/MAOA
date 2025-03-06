@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Misadventures of Albert</title>
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="home">
+    <div class="lander">
+        <div class="left">
+            <div class="rune">ᚢ</div>
+            <div class="rune">ᛖ</div>
+            <div class="rune">ᚱ</div>
+            <div class="rune">ᚷ</div>
+            <div class="rune">ᛁ</div>
+            <div class="rune">ᛚ</div>
+            <div class="wrapper">
+                <h1>Misadventures <br/> of <br/> Albert</h1>
+                <h2 class="italic">By K Madhav</h2>
+            </div>
+        </div>
+        <div class="right">
+            <button><a href="./Pages/chapters.html">Chapters</a></button>
+            <button><a href="./Pages/riddle.html">The Riddle</a></button>
+            <button><a href="./Pages/credits.html">Credits</a></button>
+        </div>
+    </div>
+    <div class="scroll-down">↓</div>
+    <div class="relics">
+        <div class="wrapper">
+            <h2>Ancient Relics</h2>
+            <div class="img">
+                <img class="pop1" src="./Assets/Images/darkBlade.png" alt="Dark Blade Image" draggable="false">
+                <img class="pop2" src="./Assets/Images/excalibur.png" alt="Excalibur Image" draggable="false">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".pop1").addEventListener("click", function() {
+            Swal.fire({
+                title: "Hint",
+                text: "l' ph'lloig ahna naIIIIor hup ones mgephaiagl",
+                customClass: {
+                    popup: 'swal-custom-popup',
+                    confirmButton: 'swal-custom-btn',
+                    title: "swal-custom-title",
+                    htmlContainer: "swal-custom-text"
+                }
+            });
+        });
+
+        document.querySelector(".pop2").addEventListener("click", function() {
+            Swal.fire({
+                title: "Hint",
+                text: "n'ghftephai ng orr'enahh ahnythor",
+                customClass: {
+                    popup: 'swal-custom-popup',
+                    confirmButton: 'swal-custom-btn',
+                    title: "swal-custom-title",
+                    htmlContainer: "swal-custom-text"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
